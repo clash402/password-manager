@@ -2,6 +2,8 @@ import json
 
 
 class DataManager:
+    def __init__(self):
+        self.PATH = "./src/data.json"
 
     # PUBLIC METHODS
     def save(self, website_input, username_input, password_input, messagebox):
@@ -19,13 +21,13 @@ class DataManager:
             messagebox.showinfo(title="Error", message="Please fill in all entries")
         else:
             try:
-                with open("data.json", "r") as file:
+                with open(self.PATH, "r") as file:
                     data = json.load(file)
             except FileNotFoundError:
-                with open("data.json", "w") as file:
+                with open(self.PATH, "w") as file:
                     json.dump(new_data, file, indent=4)
             else:
-                with open("data.json", "w") as file:
+                with open(self.PATH, "w") as file:
                     data.update(new_data)
                     json.dump(data, file, indent=4)
             finally:
@@ -35,7 +37,7 @@ class DataManager:
         website = website_input.get()
 
         try:
-            with open("data.json") as data_file:
+            with open(self.PATH) as data_file:
                 data = json.load(data_file)
         except FileNotFoundError:
             messagebox.showinfo(title="Error", message="No entry found")
