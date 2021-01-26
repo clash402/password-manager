@@ -3,7 +3,7 @@ import json
 
 class DataManager:
     def __init__(self):
-        self.PATH = "./src/data.json"
+        self.PATH = "./password_manager/data/data.json"
 
     # PUBLIC METHODS
     def save(self, website_input, username_input, password_input, messagebox):

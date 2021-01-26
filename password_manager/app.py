@@ -1,6 +1,6 @@
-from src.data_manager import DataManager
-from src.password import Password
-from src.ui import UI
+from password_manager.data.data_manager import DataManager
+from password_manager.password import Password
+from password_manager.ui import UI
 
 
 class App:

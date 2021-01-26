@@ -30,7 +30,7 @@ class UI(Tk):
 
     # Canvas
     def _draw_canvas(self):
-        self.logo_img = PhotoImage(file="./assets/images/logo.png")
+        self.logo_img = PhotoImage(file="./password_manager/resources/images/logo.png")
         canvas = Canvas(width=200, height=200)
         canvas.create_image(100, 100, image=self.logo_img)  # highlightthickness=0
         canvas.grid(column=1, row=0)

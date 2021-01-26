@@ -1,4 +1,4 @@
-from src.app import App
+from password_manager.app import App
 
 
 if __name__ == "__main__":
